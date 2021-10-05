@@ -1,4 +1,4 @@
-nav{
+.top-nav{
   height: 120px;
   background-color:#4056A1;
   color: #FFFFFF ;
@@ -7,11 +7,11 @@ nav{
   align-items: center;
   padding: 1.5em;
 }
-#right{
+#right-nav{
   display: flex;
   flex-direction: column;
 }
-#right div:nth-of-type(2){
+#right-nav div:nth-of-type(2){
   align-self: center;
 }
 nav i{
@@ -20,6 +20,3 @@ nav i{
 }
 
 
-nav #logo{
-  font-family: 'Bungee';
-} 
