@@ -1,0 +1,25 @@
+nav{
+  height: 120px;
+  background-color:#4056A1;
+  color: #FFFFFF ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em;
+}
+#right{
+  display: flex;
+  flex-direction: column;
+}
+#right div:nth-of-type(2){
+  align-self: center;
+}
+nav i{
+  color: red;
+  
+}
+
+
+nav #logo{
+  font-family: 'Bungee';
+} 
