@@ -40,8 +40,8 @@ textarea{
   border: 4px solid black;
   background-color: red;
 }
- .tweet-para {
-  margin: 50px 10px 10px;
+ #tweet-para {
+  margin: 70px 10px 10px;
   padding-top: 15px;
 }
 .container article hr{
@@ -62,4 +62,7 @@ textarea{
 
 article:hover{
   box-shadow: 10px 10px 5px green;
+}
+#image-src{
+  font-size: 10px;
 }

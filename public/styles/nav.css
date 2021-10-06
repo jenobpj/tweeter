@@ -32,9 +32,17 @@ nav{
   left:0;
   z-index: 2;
 }
-header{
+.main-header{
   z-index: 1;
   top: 120px;
+  height: 400px;
+  width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;;
+   align-items: center;
+   background-color: #0098de;
+   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); 
 }
 
 
