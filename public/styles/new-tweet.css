@@ -25,3 +25,41 @@ textarea{
 .over-char-limit{
   color: red;
 }
+.tweeter-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 15px 5px;
+}
+.tweeter-header > div{
+  display: flex;
+  align-items: center;
+}
+.container article{
+  margin-top: 15px;
+  border: 4px solid black;
+  background-color: red;
+}
+ .tweet-para {
+  margin: 50px 10px 10px;
+  padding-top: 15px;
+}
+.container article hr{
+  margin: 10px;
+  border: none;
+  border-bottom:4px solid black; ;
+}
+.container  article footer{
+  font-size: medium;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  color: #4056a1;
+}
+ .container article footer i:hover{
+   color:goldenrod;
+}
+
+article:hover{
+  box-shadow: 10px 10px 5px green;
+}
