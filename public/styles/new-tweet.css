@@ -66,3 +66,23 @@ article:hover{
 #image-src{
   font-size: 10px;
 }
+#tweet-long-error{
+  display: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: sans-serif;
+  color: red;
+  border: 5px solid red;
+  text-align: center;
+}
+#tweet-empty-error{
+  display: none;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: sans-serif;
+  color: red;
+  border: 5px solid red;
+  text-align: center;
+}

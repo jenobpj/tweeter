@@ -1,28 +1,18 @@
 $(document).ready(()=>{
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
+  const loadtweets=function(){
+   $.ajax({
+     url: "/tweets",
+     method: "GET",
+     dataType:"json",
+     success:(tweets)=>{
+       console.log("data line 9",tweets)
+       renderTweets(tweets)
+     },
+     error:(err)=>{
+       console.log(`line 39 there was an error:${err}`)
+     }
+   })
+  }
 
 const renderTweets = function(tweets) {
   for(const elment in tweets){
@@ -38,16 +28,16 @@ const createTweetElement = function(tweet) {
     <div class="tweeter-header">
       <div>
        <img id= 'image-src' src="${tweet.user.avatars}">
-        <p id='name-id'>"${tweet.user.name}"</p>
+        <p id='name-id'>${tweet.user.name}</p>
       </div>
-      <span>"${tweet.user.handle}"</span>
+      <span>${tweet.user.handle}</span>
     </div>
   </header>
-    <p id="tweet-para">"${tweet.content.text}"</p>
+    <p id="tweet-para">${tweet.content.text}</p>
     <hr>
     <footer class="tweeet-footer">
       <div>
-        <span>10 days ago</span>
+        <span>${timeago.format(tweet.created_at)}</span>
       </div>
       <div>
         <i class="fas fa-flag"></i>
@@ -59,6 +49,27 @@ const createTweetElement = function(tweet) {
   // ...
   return $tweet;
 }
+// enderTweets(data)
+$("#new-tweet-form").on("submit",function(event){
+  event.preventDefault();
+  if($('#word-box').val() === '') {
+   $('#tweet-empty-error').slideDown();
+   $('#tweet-long-error').slideUp();
+  } else if($('#word-box').val().length >140) {
+    $('#tweet-empty-error').slideUp();
+    $('#tweet-long-error').slideDown();
+  } else{
+    $('#tweet-empty-error').slideUp();
+    $('#tweet-long-error').slideUp();
+   
 
-renderTweets(data);
+  const serializedData=$(this).serialize();
+  $.post('/tweets',serializedData,(response)=>{
+    console.log('line 60',serializedData)
+    loadtweets();
+    $('#word-box').val('');
+    $('#text-counter').text('140')
+  })
+}
+})
 })
