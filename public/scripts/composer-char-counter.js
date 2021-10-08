@@ -1,4 +1,4 @@
-//when dom loads
+//character counts
 $(document).ready(function() {
   $('#word-box').keyup(function(){
     let number=140;

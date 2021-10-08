@@ -1,16 +1,15 @@
 $(document).ready(()=>{
   //ajax request for getting data
-  const loadtweets=function(){
-   $.ajax({
-     url: "/tweets",
-     method: "GET",
-     dataType:"json",
-     success:(tweets)=>{
-       console.log("data line 9",tweets)
-       renderTweets(tweets)
+  const loadtweets = function(){
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType:"json",
+      success:(tweets)=>{
+        renderTweets(tweets)
      },
      error:(err)=>{
-       console.log(`line 39 there was an error:${err}`)
+       console.log(`there was an error:${err}`);
      }
    })
   }
