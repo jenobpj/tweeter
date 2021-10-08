@@ -14,6 +14,8 @@ This repository is the starter code for the project: Students will fork and clon
 This app uses HTML,CSS,JS,jQuery and AJAX on the front-end;and node and express on the bac-end
 
 ## Final Product
+!["profile-1.png"](./public/images/profile-1.png)
+!["profile-2.png"](./public/images/profile-2.png)
 !["ERROR.png"](./public/images/ERROR.png)
 
 ## Getting Started
