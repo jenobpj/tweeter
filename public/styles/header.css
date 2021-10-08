@@ -1,4 +1,5 @@
-.main-header{
+
+ .main-header{
   z-index: 1;
   top: 120px;
   height: 400px;
@@ -9,4 +10,24 @@
    align-items: center;
    background-color: #0098de;
    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); 
+}
+@media(min-width:1024px){
+  .main-header{
+    width: 26%;
+    float:left;
+    top: 150px;
+    left: 70px;
+  }
+  .container{
+    top:260px;
+    left: 35%;
+    width: 60%;
+    right: 70px;
+  }
+}
+@media(max-width:1024px){
+  .top-nav{
+    background-color: #0098de;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); 
+} 
 }

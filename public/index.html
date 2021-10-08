@@ -44,22 +44,25 @@
         <div><i class="fas fa-angle-double-down"></i></div>
       </span>
     </nav>
-
+    <!-- profile image and name-->
     <header class="main-header">
       <div >
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <h2>Neil</h2>
       </div>
   </header>
+
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <!--error messages-->
         <p id="tweet-long-error">You are exceeding the limit</p>
           <p id="tweet-empty-error">Tweet content is empty</p>
+          <!-- form-->
         <form id="new-tweet-form" action="/tweets" method="POST">
           <textarea id="word-box" name="text" placeholder="What are you humming about?"id="tweet-text"></textarea>
           <footer>
@@ -68,6 +71,7 @@
           </footer>
         </form>
       </section>
+      <!--tweet section-->
       <section class=tweets-container>
     </section>
     </main>

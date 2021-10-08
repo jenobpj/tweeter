@@ -1,4 +1,5 @@
 $(document).ready(()=>{
+  //ajax request for getting data
   const loadtweets=function(){
    $.ajax({
      url: "/tweets",
@@ -13,7 +14,7 @@ $(document).ready(()=>{
      }
    })
   }
-
+//fetche the data and append to  html
 const renderTweets = function(tweets) {
   for(const elment in tweets){
     const tweetData=tweets[elment]
@@ -21,7 +22,7 @@ const renderTweets = function(tweets) {
     $('.tweets-container').append($tweet)
   }
 }
-
+//manipulate the dom with jquery
 const createTweetElement = function(tweet) {
   let $tweet = ` <article class="tweet">
   <header>
@@ -50,8 +51,10 @@ const createTweetElement = function(tweet) {
   return $tweet;
 }
 // enderTweets(data)
+
 $("#new-tweet-form").on("submit",function(event){
   event.preventDefault();
+  //validation
   if($('#word-box').val() === '') {
    $('#tweet-empty-error').slideDown();
    $('#tweet-long-error').slideUp();
@@ -62,7 +65,7 @@ $("#new-tweet-form").on("submit",function(event){
     $('#tweet-empty-error').slideUp();
     $('#tweet-long-error').slideUp();
    
-
+  //shows all tweets
   const serializedData=$(this).serialize();
   $.post('/tweets',serializedData,(response)=>{
     console.log('line 60',serializedData)
