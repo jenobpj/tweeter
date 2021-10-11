@@ -18,7 +18,7 @@ const renderTweets = function(tweets) {
   for(const elment in tweets){
     const tweetData=tweets[elment]
     const $tweet=createTweetElement(tweetData);
-    $('.tweets-container').append($tweet)
+    $('.tweets-container').prepend($tweet)
   }
 }
 //manipulate the dom with jquery
