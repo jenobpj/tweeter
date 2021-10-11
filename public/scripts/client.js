@@ -57,10 +57,10 @@ $("#new-tweet-form").on("submit",function(event){
   if($('#word-box').val() === '') {
    $('#tweet-empty-error').slideDown();
    $('#tweet-long-error').slideUp();
-  } else if($('#word-box').val().length >140) {
+  } else if ($('#word-box').val().length >140) {
     $('#tweet-empty-error').slideUp();
     $('#tweet-long-error').slideDown();
-  } else{
+  } else {
     $('#tweet-empty-error').slideUp();
     $('#tweet-long-error').slideUp();
    
@@ -72,6 +72,8 @@ $("#new-tweet-form").on("submit",function(event){
     $('#word-box').val('');
     $('#text-counter').text('140')
   })
+
 }
 })
+loadtweets();
 })
